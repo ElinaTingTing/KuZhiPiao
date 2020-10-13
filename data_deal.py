@@ -10,7 +10,6 @@ import numpy as np
 import pandas as pd 
 from pandas import DataFrame as df
 
-<<<<<<< HEAD
 pa=os.getcwd()
 ###---------------存放各个月份的数据--------------------###
 file4_path=pa+r'\original_data\4'  ##截至到各个月底的数据，4月份
@@ -31,27 +30,6 @@ file62_path=pa+r'\original_data\6_2'
 file72_path=pa+r'\original_data\7_2'
 file82_path=pa+r'\original_data\8_2'
 file92_path=pa+r'\original_data\9_2'
-=======
-pa=os.getcwd()+"\\data"
-###---------------存放各个月份的数据--------------------###
-file4_path=pa+r'\4'  ##截至到各个月底的数据，4月份
-file5_path=pa+r'\5'
-file6_path=pa+r'\6'
-file7_path=pa+r'\7'
-file8_path=pa+r'\8'
-file9_path=pa+r'\9'
-file10_path=pa+r'\10'
-file11_path=pa+r'\11'
-file12_path=pa+r'\12'
-file1_path=pa+r'\1'
-file2_path=pa+r'\2'
-file3_path=pa+r'\3'  
-file42_path=pa+r'\4_2'  
-file52_path=pa+r'\5_2'  
-file62_path=pa+r'\6_2' 
-file72_path=pa+r'\7_2' 
-file82_path=pa+r'\8_2'
->>>>>>> 9c0f50775ad9ec9ab7b09b6a8d96d239cdb0911b
 
 ## 4月份统计的数据
 data4=df()
@@ -396,145 +374,7 @@ data9_2=pickle.load(f_)
 f_.close()
 
 
-=======
-###-------------------数据存储-----------------------###
-f_=open('data4.pkl','wb')
-pickle.dump(data4,f_)
-f_.close()
 
-f_=open('data5.pkl','wb')
-pickle.dump(data5,f_)
-f_.close()
-
-f_=open('data6.pkl','wb')
-pickle.dump(data6,f_)
-f_.close()
-
-f_=open('data7.pkl','wb')
-pickle.dump(data7,f_)
-f_.close()
-
-f_=open('data8.pkl','wb')
-pickle.dump(data8,f_)
-f_.close()
-
-f_=open('data9.pkl','wb')
-pickle.dump(data9,f_)
-f_.close()
-
-f_=open('data10.pkl','wb')
-pickle.dump(data10,f_)
-f_.close()
-
-f_=open('data11.pkl','wb')
-pickle.dump(data11,f_)
-f_.close()
-
-f_=open('data12.pkl','wb')
-pickle.dump(data12,f_)
-f_.close()
-
-f_=open('data1.pkl','wb')
-pickle.dump(data1,f_)
-f_.close()
-
-f_=open('data2.pkl','wb')
-pickle.dump(data2,f_)
-f_.close()
-
-f_=open('data3.pkl','wb')
-pickle.dump(data3,f_)
-f_.close()
-
-f_=open('data4_2.pkl','wb')
-pickle.dump(data4_2,f_)
-f_.close()
-
-f_=open('data5_2.pkl','wb')
-pickle.dump(data5_2,f_)
-f_.close()
-
-f_=open('data6_2.pkl','wb')
-pickle.dump(data6_2,f_)
-f_.close()
-
-f_=open('data7_2.pkl','wb')
-pickle.dump(data7_2,f_)
-f_.close()
-
-f_=open('data8_2.pkl','wb')
-pickle.dump(data8_2,f_)
-f_.close()
-
-###----------------------数据读取----------------------------###
-f_=open('data4.pkl','rb')
-data4=pickle.load(f_)
-f_.close()
-
-f_=open('data5.pkl','rb')
-data5=pickle.load(f_)
-f_.close()
-
-f_=open('data6.pkl','rb')
-data6=pickle.load(f_)
-f_.close()
-
-f_=open('data7.pkl','rb')
-data7=pickle.load(f_)
-f_.close()
-
-f_=open('data8.pkl','rb')
-data8=pickle.load(f_)
-f_.close()
-
-f_=open('data9.pkl','rb')
-data9=pickle.load(f_)
-f_.close()
-
-f_=open('data10.pkl','rb')
-data10=pickle.load(f_)
-f_.close()
-
-f_=open('data11.pkl','rb')
-data11=pickle.load(f_)
-f_.close()
-
-f_=open('data12.pkl','rb')
-data12=pickle.load(f_)
-f_.close()
-
-f_=open('data1.pkl','rb')
-data1=pickle.load(f_)
-f_.close()
-
-f_=open('data2.pkl','rb')
-data2=pickle.load(f_)
-f_.close()
-
-f_=open('data3.pkl','rb')
-data3=pickle.load(f_)
-f_.close()
-
-f_=open('data4_2.pkl','rb')
-data4_2=pickle.load(f_)
-f_.close()
-
-f_=open('data5_2.pkl','rb')
-data5_2=pickle.load(f_)
-f_.close()
-
-f_=open('data6_2.pkl','rb')
-data6_2=pickle.load(f_)
-f_.close()
-
-f_=open('data7_2.pkl','rb')
-data7_2=pickle.load(f_)
-f_.close()
-
-f_=open('data8_2.pkl','rb')
-data8_2=pickle.load(f_)
-f_.close()
->>>>>>> 9c0f50775ad9ec9ab7b09b6a8d96d239cdb0911b
 ###----------------------异常数据--------------------------###
 data6['逾期天数'][data6['逾期本金']==0]=0
 data7['逾期天数'][data7['逾期本金']==0]=0
@@ -551,10 +391,8 @@ data5_2['逾期天数'][data5_2['逾期本金']==0]=0
 data6_2['逾期天数'][data6_2['逾期本金']==0]=0
 data7_2['逾期天数'][data7_2['逾期本金']==0]=0
 data8_2['逾期天数'][data8_2['逾期本金']==0]=0
-<<<<<<< HEAD
 data9_2['逾期天数'][data9_2['逾期本金']==0]=0
-=======
->>>>>>> 9c0f50775ad9ec9ab7b09b6a8d96d239cdb0911b
+
 
 ###-------------------划分渠道-------------------------###    
 data4['渠道1']=data4['渠道'].map({'马上消费':'马上消费','自授信,众安':'众安','众安':'众安',\
@@ -598,14 +436,10 @@ data7_2['渠道1']=data7_2['渠道'].map({'马上消费':'马上消费','自授�
  '众安':'众安','自授信,阳光':'阳光','阳光':'阳光','自授信':'自授信','众安,阳光':'阳光','京东白条':'京东白条'})    
 
 data8_2['渠道1']=data8_2['渠道'].map({'马上消费':'马上消费','自授信,众安':'众安',\
-<<<<<<< HEAD
  '众安':'众安','自授信,阳光':'阳光','阳光':'阳光','自授信':'自授信','众安,阳光':'阳光','京东白条':'京东白条'})
 
 data9_2['渠道1']=data9_2['渠道'].map({'马上消费':'马上消费','自授信,众安':'众安',\
  '众安':'众安','自授信,阳光':'阳光','阳光':'阳光','自授信':'自授信','众安,阳光':'阳光','京东白条':'京东白条'})
-=======
- '众安':'众安','自授信,阳光':'阳光','阳光':'阳光','自授信':'自授信','众安,阳光':'阳光','京东白条':'京东白条'})    
->>>>>>> 9c0f50775ad9ec9ab7b09b6a8d96d239cdb0911b
     
 data4['逾期天数']=data4['逾期天数'].fillna(0)    
 data5['逾期天数']=data5['逾期天数'].fillna(0)  
@@ -622,13 +456,10 @@ data3['逾期天数']=data3['逾期天数'].fillna(0)
 data4_2['逾期天数']=data4_2['逾期天数'].fillna(0)    
 data5_2['逾期天数']=data5_2['逾期天数'].fillna(0)  
 data6_2['逾期天数']=data6_2['逾期天数'].fillna(0)  
-data7_2['逾期天数']=data7_2['逾期天数'].fillna(0)  
-<<<<<<< HEAD
+data7_2['逾期天数']=data7_2['逾期天数'].fillna(0)
 data8_2['逾期天数']=data8_2['逾期天数'].fillna(0)
 data9_2['逾期天数']=data9_2['逾期天数'].fillna(0)  
-=======
-data8_2['逾期天数']=data8_2['逾期天数'].fillna(0)  
->>>>>>> 9c0f50775ad9ec9ab7b09b6a8d96d239cdb0911b
+
 
 data4['授信时间']=pd.to_datetime(data4['授信时间'].apply(lambda x:x.split(' ')[0]))
 data5['授信时间']=pd.to_datetime(data5['授信时间'].apply(lambda x:x.split(' ')[0]))
@@ -658,12 +489,9 @@ data7_2['授信时间']=pd.to_datetime(data7_2['授信时间'].apply(lambda x:x.
 data7_2=data7_2[~(data7_2['授信时间']>'2020-07-31')]   
 data8_2['授信时间']=pd.to_datetime(data8_2['授信时间'].apply(lambda x:x.split(' ')[0]))
 data8_2=data8_2[~(data8_2['授信时间']>'2020-08-31')]
-<<<<<<< HEAD
 data9_2['授信时间']=pd.to_datetime(data9_2['授信时间'].apply(lambda x:x.split(' ')[0]))
 data9_2=data9_2[~(data9_2['授信时间']>'2020-08-31')]
-=======
 
->>>>>>> 9c0f50775ad9ec9ab7b09b6a8d96d239cdb0911b
 ####调整2月份数据，由于其
 #data2["逾期天数"]=np.where((data2["逾期天数"]-25)>0,data2["逾期天数"]-25,0)
 #data2["逾期天数"]=np.where(data2["逾期天数"]<20,0,data2["逾期天数"])
@@ -703,17 +531,11 @@ data7_2=data7_2[data7_2["渠道1"]!="京东白条"]
 data7_2.index=range(len(data7_2))
 data8_2=data8_2[data8_2["渠道1"]!="京东白条"]
 data8_2.index=range(len(data8_2))
-<<<<<<< HEAD
 data9_2=data9_2[data9_2["渠道1"]!="京东白条"]
 data9_2.index=range(len(data9_2))
 
 '-----------需要统计的月份数据-------'
 data=data9_2.copy()
-=======
-
-'-----------需要统计的月份数据-------'
-data=data8_2.copy()
->>>>>>> 9c0f50775ad9ec9ab7b09b6a8d96d239cdb0911b
 
 '--------------- 统计数据--------------'
 '----------汇总-------------'
