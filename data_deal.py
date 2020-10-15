@@ -10,7 +10,7 @@ import numpy as np
 import pandas as pd 
 from pandas import DataFrame as df
 
-pa=os.getcwd()
+pa=r'G:\资产情况'
 ###---------------存放各个月份的数据--------------------###
 file4_path=pa+r'\original_data\4'  ##截至到各个月底的数据，4月份
 file5_path=pa+r'\original_data\5'
@@ -31,188 +31,188 @@ file72_path=pa+r'\original_data\7_2'
 file82_path=pa+r'\original_data\8_2'
 file92_path=pa+r'\original_data\9_2'
 
-## 4月份统计的数据
-data4=df()
-for file in os.listdir(file4_path):
-    data_per=pd.read_excel(file4_path+'\\'+file)
-    data4=pd.concat([data4,data_per])
-data4=data4.drop_duplicates()
-data4=data4[(data4['渠道']!='浦发')&(data4['渠道']!='银联')]
-    
-## 5月份统计的数据
-data5=df()
-for file in os.listdir(file5_path):
-    data_per=pd.read_excel(file5_path+'\\'+file)
-    data5=pd.concat([data5,data_per])
-data5=data5.drop_duplicates()
-data5=data5[(data5['渠道']!='浦发')&(data5['渠道']!='银联')]    
-            
-## 6月份统计数据
-data6=df()
-for file in os.listdir(file6_path):
-    data_per=pd.read_excel(file6_path+'\\'+file)
-    data6=pd.concat([data6,data_per])
-data6=data6.drop_duplicates()
-data6=data6[(data6['渠道']!='浦发')&(data6['渠道']!='银联')] 
-            
-## 7月份统计数据
-data7=df()
-for file in os.listdir(file7_path):
-    data_per=pd.read_excel(file7_path+'\\'+file)
-    data7=pd.concat([data7,data_per])
-data7=data7.drop_duplicates()
-data7=data7[(data7['渠道']!='浦发')&(data7['渠道']!='银联')] 
-data7=data7[~data7['渠道'].isnull()]
+# ## 4月份统计的数据
+# data4=df()
+# for file in os.listdir(file4_path):
+#     data_per=pd.read_excel(file4_path+'\\'+file)
+#     data4=pd.concat([data4,data_per])
+# data4=data4.drop_duplicates()
+# data4=data4[(data4['渠道']!='浦发')&(data4['渠道']!='银联')]
+#
+# ## 5月份统计的数据
+# data5=df()
+# for file in os.listdir(file5_path):
+#     data_per=pd.read_excel(file5_path+'\\'+file)
+#     data5=pd.concat([data5,data_per])
+# data5=data5.drop_duplicates()
+# data5=data5[(data5['渠道']!='浦发')&(data5['渠道']!='银联')]
+#
+# ## 6月份统计数据
+# data6=df()
+# for file in os.listdir(file6_path):
+#     data_per=pd.read_excel(file6_path+'\\'+file)
+#     data6=pd.concat([data6,data_per])
+# data6=data6.drop_duplicates()
+# data6=data6[(data6['渠道']!='浦发')&(data6['渠道']!='银联')]
+#
+# ## 7月份统计数据
+# data7=df()
+# for file in os.listdir(file7_path):
+#     data_per=pd.read_excel(file7_path+'\\'+file)
+#     data7=pd.concat([data7,data_per])
+# data7=data7.drop_duplicates()
+# data7=data7[(data7['渠道']!='浦发')&(data7['渠道']!='银联')]
+# data7=data7[~data7['渠道'].isnull()]
+#
+#
+# ## 8月份统计数据（截至到8月底）
+# data8=df()
+# for file in os.listdir(file8_path):
+#     print(file)
+#     data_per=pd.read_excel(file8_path+'\\'+file)
+#     data8=pd.concat([data8,data_per])
+# data8=data8.drop_duplicates()
+# data8=data8[(data8['渠道']!='浦发')&(data8['渠道']!='银联')]
+# data8=data8[~data8['渠道'].isnull()]
+#
+#
+# ## 9月份统计数据（截止到9月底）
+# data9=df()
+# for file in os.listdir(file9_path):
+#     print(file)
+#     data_per=pd.read_excel(file9_path+'\\'+file)
+#     data9=pd.concat([data9,data_per])
+# data9=data9.drop_duplicates()
+# data9=data9[(data9['渠道']!='浦发')&(data9['渠道']!='银联')]
+# data9=data9[~data9['渠道'].isnull()]
+#
+# ## 10月份统计数据（截止到10月底）
+# data10=df()
+# for file in os.listdir(file10_path):
+#     print(file)
+#     data_per=pd.read_excel(file10_path+'\\'+file)
+#     data10=pd.concat([data10,data_per])
+# data10=data10.drop_duplicates()
+# data10=data10[(data10['渠道']!='浦发')&(data10['渠道']!='银联')]
+# data10=data10[~data10['渠道'].isnull()]
+#
+# ## 11月份统计数据
+# data11=df()
+# for file in os.listdir(file11_path):
+#     print(file)
+#     data_per=pd.read_excel(file11_path+'\\'+file)
+#     data11=pd.concat([data11,data_per])
+# data11=data11.drop_duplicates()
+# data11=data11[(data11['渠道']!='浦发')&(data11['渠道']!='银联')]
+# data11=data11[~data11['渠道'].isnull()]
+#
+# ## 12月份统计数据
+# data12=df()
+# for file in os.listdir(file12_path):
+#     print(file)
+#     data_per=pd.read_excel(file12_path+'\\'+file)
+#     data12=pd.concat([data12,data_per])
+# data12=data12.drop_duplicates()
+# data12=data12[(data12['渠道']!='浦发')&(data12['渠道']!='银联')]
+# data12=data12[~data12['渠道'].isnull()]
+#
+# ## 2020年1月份统计数据
+# data1=df()
+# for file in os.listdir(file1_path):
+#     print(file)
+#     data_per=pd.read_excel(file1_path+'\\'+file)
+#     data1=pd.concat([data1,data_per])
+# data1=data1.drop_duplicates()
+# data1=data1[(data1['渠道']!='浦发')&(data1['渠道']!='银联')]
+# data1=data1[~data1['渠道'].isnull()]
+#
+# data2=df()
+# for file in os.listdir(file2_path):
+#     try:
+#         print(file)
+#         data_per=pd.read_excel(file2_path+'\\'+file)
+#         data2=pd.concat([data2,data_per])
+#     except:
+#         continue
+# data2=data2.drop_duplicates()
+# data2=data2[(data2['渠道']!='浦发')&(data2['渠道']!='银联')]
+# data2=data2[~data2['渠道'].isnull()]
+#
+# data3=df()
+# for file in os.listdir(file3_path):
+#     try:
+#         print(file)
+#         data_per=pd.read_excel(file3_path+'\\'+file)
+#         data3=pd.concat([data3,data_per])
+#     except:
+#         continue
+# data3=data3.drop_duplicates()
+# data3=data3[(data3['渠道']!='浦发')&(data3['渠道']!='银联')]
+# data3=data3[~data3['渠道'].isnull()]
+#
+# data4_2=df()
+# for file in os.listdir(file42_path):
+#     try:
+#         print(file)
+#         data_per=pd.read_excel(file42_path+'\\'+file)
+#         data4_2=pd.concat([data4_2,data_per])
+#     except:
+#         continue
+# data4_2=data4_2.drop_duplicates()
+# data4_2=data4_2[(data4_2['渠道']!='浦发')&(data4_2['渠道']!='银联')]
+# data4_2=data4_2[~data4_2['渠道'].isnull()]
+#
+#
+# data5_2=df()
+# for file in os.listdir(file52_path):
+#     try:
+#         print(file)
+#         data_per=pd.read_excel(file52_path+'\\'+file)
+#         data5_2=pd.concat([data5_2,data_per])
+#     except:
+#         continue
+# data5_2=data5_2.drop_duplicates()
+# data5_2=data5_2[(data5_2['渠道']!='浦发')&(data5_2['渠道']!='银联')]
+# data5_2=data5_2[~data5_2['渠道'].isnull()]
+#
+#
+# data6_2=df()
+# for file in os.listdir(file62_path):
+#     try:
+#         print(file)
+#         data_per=pd.read_excel(file62_path+'\\'+file)
+#         data6_2=pd.concat([data6_2,data_per])
+#     except:
+#         continue
+# data6_2=data6_2.drop_duplicates()
+# data6_2=data6_2[(data6_2['渠道']!='浦发')&(data6_2['渠道']!='银联')]
+# data6_2=data6_2[~data6_2['渠道'].isnull()]
+#
+#
+# data7_2=df()
+# for file in os.listdir(file72_path):
+#     try:
+#         print(file)
+#         data_per=pd.read_excel(file72_path+'\\'+file)
+#         data7_2=pd.concat([data7_2,data_per])
+#     except:
+#         continue
+# data7_2=data7_2.drop_duplicates()
+# data7_2=data7_2[(data7_2['渠道']!='浦发')&(data7_2['渠道']!='银联')]
+# data7_2=data7_2[~data7_2['渠道'].isnull()]
+#
+# data8_2=df()
+# for file in os.listdir(file82_path):
+#     try:
+#         print(file)
+#         data_per=pd.read_excel(file82_path+'\\'+file)
+#         data8_2=pd.concat([data8_2,data_per])
+#     except:
+#         continue
+# data8_2=data8_2.drop_duplicates()
+# data8_2=data8_2[(data8_2['渠道']!='浦发')&(data8_2['渠道']!='银联')]
+# data8_2=data8_2[~data8_2['渠道'].isnull()]
 
-
-## 8月份统计数据（截至到8月底）
-data8=df()
-for file in os.listdir(file8_path):
-    print(file)
-    data_per=pd.read_excel(file8_path+'\\'+file)
-    data8=pd.concat([data8,data_per])
-data8=data8.drop_duplicates()
-data8=data8[(data8['渠道']!='浦发')&(data8['渠道']!='银联')] 
-data8=data8[~data8['渠道'].isnull()]
-
-
-## 9月份统计数据（截止到9月底）
-data9=df()
-for file in os.listdir(file9_path):
-    print(file)
-    data_per=pd.read_excel(file9_path+'\\'+file)
-    data9=pd.concat([data9,data_per])
-data9=data9.drop_duplicates()
-data9=data9[(data9['渠道']!='浦发')&(data9['渠道']!='银联')] 
-data9=data9[~data9['渠道'].isnull()]
-
-## 10月份统计数据（截止到10月底）
-data10=df()
-for file in os.listdir(file10_path):
-    print(file)
-    data_per=pd.read_excel(file10_path+'\\'+file)
-    data10=pd.concat([data10,data_per])
-data10=data10.drop_duplicates()
-data10=data10[(data10['渠道']!='浦发')&(data10['渠道']!='银联')] 
-data10=data10[~data10['渠道'].isnull()]
-
-## 11月份统计数据
-data11=df()
-for file in os.listdir(file11_path):
-    print(file)
-    data_per=pd.read_excel(file11_path+'\\'+file)
-    data11=pd.concat([data11,data_per])
-data11=data11.drop_duplicates()
-data11=data11[(data11['渠道']!='浦发')&(data11['渠道']!='银联')] 
-data11=data11[~data11['渠道'].isnull()]
-
-## 12月份统计数据
-data12=df()
-for file in os.listdir(file12_path):
-    print(file)
-    data_per=pd.read_excel(file12_path+'\\'+file)
-    data12=pd.concat([data12,data_per])
-data12=data12.drop_duplicates()
-data12=data12[(data12['渠道']!='浦发')&(data12['渠道']!='银联')] 
-data12=data12[~data12['渠道'].isnull()]
-
-## 2020年1月份统计数据
-data1=df()
-for file in os.listdir(file1_path):
-    print(file)
-    data_per=pd.read_excel(file1_path+'\\'+file)
-    data1=pd.concat([data1,data_per])
-data1=data1.drop_duplicates()
-data1=data1[(data1['渠道']!='浦发')&(data1['渠道']!='银联')] 
-data1=data1[~data1['渠道'].isnull()]
-
-data2=df()
-for file in os.listdir(file2_path):
-    try:
-        print(file)
-        data_per=pd.read_excel(file2_path+'\\'+file)
-        data2=pd.concat([data2,data_per])
-    except:
-        continue     
-data2=data2.drop_duplicates()
-data2=data2[(data2['渠道']!='浦发')&(data2['渠道']!='银联')] 
-data2=data2[~data2['渠道'].isnull()]
-
-data3=df()
-for file in os.listdir(file3_path):
-    try:
-        print(file)
-        data_per=pd.read_excel(file3_path+'\\'+file)
-        data3=pd.concat([data3,data_per])
-    except:
-        continue     
-data3=data3.drop_duplicates()
-data3=data3[(data3['渠道']!='浦发')&(data3['渠道']!='银联')] 
-data3=data3[~data3['渠道'].isnull()]
-
-data4_2=df()
-for file in os.listdir(file42_path):
-    try:
-        print(file)
-        data_per=pd.read_excel(file42_path+'\\'+file)
-        data4_2=pd.concat([data4_2,data_per])
-    except:
-        continue     
-data4_2=data4_2.drop_duplicates()
-data4_2=data4_2[(data4_2['渠道']!='浦发')&(data4_2['渠道']!='银联')] 
-data4_2=data4_2[~data4_2['渠道'].isnull()]
-
-
-data5_2=df()
-for file in os.listdir(file52_path):
-    try:
-        print(file)
-        data_per=pd.read_excel(file52_path+'\\'+file)
-        data5_2=pd.concat([data5_2,data_per])
-    except:
-        continue     
-data5_2=data5_2.drop_duplicates()
-data5_2=data5_2[(data5_2['渠道']!='浦发')&(data5_2['渠道']!='银联')] 
-data5_2=data5_2[~data5_2['渠道'].isnull()]
-
-
-data6_2=df()
-for file in os.listdir(file62_path):
-    try:
-        print(file)
-        data_per=pd.read_excel(file62_path+'\\'+file)
-        data6_2=pd.concat([data6_2,data_per])
-    except:
-        continue     
-data6_2=data6_2.drop_duplicates()
-data6_2=data6_2[(data6_2['渠道']!='浦发')&(data6_2['渠道']!='银联')] 
-data6_2=data6_2[~data6_2['渠道'].isnull()]
-
-
-data7_2=df()
-for file in os.listdir(file72_path):
-    try:
-        print(file)
-        data_per=pd.read_excel(file72_path+'\\'+file)
-        data7_2=pd.concat([data7_2,data_per])
-    except:
-        continue     
-data7_2=data7_2.drop_duplicates()
-data7_2=data7_2[(data7_2['渠道']!='浦发')&(data7_2['渠道']!='银联')] 
-data7_2=data7_2[~data7_2['渠道'].isnull()]
-
-data8_2=df()
-for file in os.listdir(file82_path):
-    try:
-        print(file)
-        data_per=pd.read_excel(file82_path+'\\'+file)
-        data8_2=pd.concat([data8_2,data_per])
-    except:
-        continue     
-data8_2=data8_2.drop_duplicates()
-data8_2=data8_2[(data8_2['渠道']!='浦发')&(data8_2['渠道']!='银联')] 
-data8_2=data8_2[~data8_2['渠道'].isnull()]
-<<<<<<< HEAD
 
 data9_2=df()
 for file in os.listdir(file92_path):
@@ -301,139 +301,138 @@ pickle.dump(data9_2,f_)
 f_.close()
 
 ###----------------------数据读取----------------------------###
-# f_=open('data4.pkl','rb')
-# data4=pickle.load(f_)
-# f_.close()
-# 
-# f_=open('data5.pkl','rb')
-# data5=pickle.load(f_)
-# f_.close()
-# 
-# f_=open('data6.pkl','rb')
-# data6=pickle.load(f_)
-# f_.close()
-# 
-# f_=open('data7.pkl','rb')
-# data7=pickle.load(f_)
-# f_.close()
-# 
-# f_=open('data8.pkl','rb')
-# data8=pickle.load(f_)
-# f_.close()
-# 
-# f_=open('data9.pkl','rb')
-# data9=pickle.load(f_)
-# f_.close()
-# 
-# f_=open('data10.pkl','rb')
-# data10=pickle.load(f_)
-# f_.close()
-# 
-# f_=open('data11.pkl','rb')
-# data11=pickle.load(f_)
-# f_.close()
-# 
-# f_=open('data12.pkl','rb')
-# data12=pickle.load(f_)
-# f_.close()
-# 
-# f_=open('data1.pkl','rb')
-# data1=pickle.load(f_)
-# f_.close()
-# 
-# f_=open('data2.pkl','rb')
-# data2=pickle.load(f_)
-# f_.close()
-# 
-# f_=open('data3.pkl','rb')
-# data3=pickle.load(f_)
-# f_.close()
-# 
-# f_=open('data4_2.pkl','rb')
-# data4_2=pickle.load(f_)
-# f_.close()
-# 
-# f_=open('data5_2.pkl','rb')
-# data5_2=pickle.load(f_)
-# f_.close()
-# 
-# f_=open('data6_2.pkl','rb')
-# data6_2=pickle.load(f_)
-# f_.close()
-# 
-# f_=open('data7_2.pkl','rb')
-# data7_2=pickle.load(f_)
-# f_.close()
-# 
-# f_=open('data8_2.pkl','rb')
-# data8_2=pickle.load(f_)
-# f_.close()
+ f_=open(pa+'\\data\\data4.pkl','rb')
+ data4=pickle.load(f_)
+ f_.close()
+ 
+ f_=open(pa+'\\data\\data5.pkl','rb')
+ data5=pickle.load(f_)
+ f_.close()
+ 
+ f_=open(pa+'\\data\\data6.pkl','rb')
+ data6=pickle.load(f_)
+ f_.close()
+ 
+ f_=open(pa+'\\data\\data7.pkl','rb')
+ data7=pickle.load(f_)
+ f_.close()
+ 
+ f_=open(pa+'\\data\\data8.pkl','rb')
+ data8=pickle.load(f_)
+ f_.close()
+ 
+ f_=open(pa+'\\data\\data9.pkl','rb')
+ data9=pickle.load(f_)
+ f_.close()
+ 
+ f_=open(pa+'\\data\\data10.pkl','rb')
+ data10=pickle.load(f_)
+ f_.close()
+ 
+ f_=open(pa+'\\data\\data11.pkl','rb')
+ data11=pickle.load(f_)
+ f_.close()
+ 
+ f_=open(pa+'\\data\\data12.pkl','rb')
+ data12=pickle.load(f_)
+ f_.close()
+ 
+ f_=open(pa+'\\data\\data1.pkl','rb')
+ data1=pickle.load(f_)
+ f_.close()
+ 
+ f_=open(pa+'\\data\\data2.pkl','rb')
+ data2=pickle.load(f_)
+ f_.close()
+ 
+ f_=open(pa+'\\data\\data3.pkl','rb')
+ data3=pickle.load(f_)
+ f_.close()
+ 
+ f_=open(pa+'\\data\\data4_2.pkl','rb')
+ data4_2=pickle.load(f_)
+ f_.close()
+ 
+ f_=open(pa+'\\data\\data5_2.pkl','rb')
+ data5_2=pickle.load(f_)
+ f_.close()
+ 
+ f_=open(pa+'\\data\\data6_2.pkl','rb')
+ data6_2=pickle.load(f_)
+ f_.close()
+ 
+ f_=open(pa+'\\data\\data7_2.pkl','rb')
+ data7_2=pickle.load(f_)
+ f_.close()
+ 
+f_=open(pa+'\\data\\data8_2.pkl','rb')
+data8_2=pickle.load(f_)
+f_.close()
 
-f_=open('data9_2.pkl','rb')
+f_=open(pa+'\\data\\data9_2.pkl','rb')
 data9_2=pickle.load(f_)
 f_.close()
 
 
-
 ###----------------------异常数据--------------------------###
-data6['逾期天数'][data6['逾期本金']==0]=0
-data7['逾期天数'][data7['逾期本金']==0]=0
-data8['逾期天数'][data8['逾期本金']==0]=0
-data9['逾期天数'][data9['逾期本金']==0]=0
-data10['逾期天数'][data10['逾期本金']==0]=0
-data11['逾期天数'][data11['逾期本金']==0]=0
-data12['逾期天数'][data12['逾期本金']==0]=0
-data1['逾期天数'][data1['逾期本金']==0]=0
-data2['逾期天数'][data2['逾期本金']==0]=0
-data3['逾期天数'][data3['逾期本金']==0]=0
-data4_2['逾期天数'][data4_2['逾期本金']==0]=0
-data5_2['逾期天数'][data5_2['逾期本金']==0]=0
-data6_2['逾期天数'][data6_2['逾期本金']==0]=0
-data7_2['逾期天数'][data7_2['逾期本金']==0]=0
+ data6['逾期天数'][data6['逾期本金']==0]=0
+ data7['逾期天数'][data7['逾期本金']==0]=0
+ data8['逾期天数'][data8['逾期本金']==0]=0
+ data9['逾期天数'][data9['逾期本金']==0]=0
+ data10['逾期天数'][data10['逾期本金']==0]=0
+ data11['逾期天数'][data11['逾期本金']==0]=0
+ data12['逾期天数'][data12['逾期本金']==0]=0
+ data1['逾期天数'][data1['逾期本金']==0]=0
+ data2['逾期天数'][data2['逾期本金']==0]=0
+ data3['逾期天数'][data3['逾期本金']==0]=0
+ data4_2['逾期天数'][data4_2['逾期本金']==0]=0
+ data5_2['逾期天数'][data5_2['逾期本金']==0]=0
+ data6_2['逾期天数'][data6_2['逾期本金']==0]=0
+ data7_2['逾期天数'][data7_2['逾期本金']==0]=0
 data8_2['逾期天数'][data8_2['逾期本金']==0]=0
 data9_2['逾期天数'][data9_2['逾期本金']==0]=0
 
 
 ###-------------------划分渠道-------------------------###    
-data4['渠道1']=data4['渠道'].map({'马上消费':'马上消费','自授信,众安':'众安','众安':'众安',\
-     '众安,众安,阳光,阳光':'阳光','众安,阳光,阳光':'阳光','自授信,阳光,阳光':'阳光',\
-     '自授信,阳光':'阳光','阳光':'阳光','自授信':'自授信','众安,阳光':'阳光'})
-data5['渠道1']=data5['渠道'].map({'马上消费':'马上消费','自授信,众安':'众安',\
-     '众安':'众安','自授信,阳光':'阳光','阳光':'阳光','自授信':'自授信','众安,阳光':'阳光'})
-data6['渠道1']=data6['渠道'].map({'马上消费':'马上消费','自授信,众安':'众安',\
-     '众安':'众安','自授信,阳光':'阳光','阳光':'阳光','自授信':'自授信','众安,阳光':'阳光'})    
-data7['渠道1']=data7['渠道'].map({'马上消费':'马上消费','自授信,众安':'众安',\
-     '众安':'众安','自授信,阳光':'阳光','阳光':'阳光','自授信':'自授信','众安,阳光':'阳光','京东白条':'京东白条'})    
-data8['渠道1']=data8['渠道'].map({'马上消费':'马上消费','自授信,众安':'众安',\
-     '众安':'众安','自授信,阳光':'阳光','阳光':'阳光','自授信':'自授信','众安,阳光':'阳光','京东白条':'京东白条'})        
-data9['渠道1']=data9['渠道'].map({'马上消费':'马上消费','自授信,众安':'众安',\
-     '众安':'众安','自授信,阳光':'阳光','阳光':'阳光','自授信':'自授信','众安,阳光':'阳光','京东白条':'京东白条'})      
-data10['渠道1']=data10['渠道'].map({'马上消费':'马上消费','自授信,众安':'众安',\
-     '众安':'众安','自授信,阳光':'阳光','阳光':'阳光','自授信':'自授信','众安,阳光':'阳光','京东白条':'京东白条'})          
-data11['渠道1']=data11['渠道'].map({'马上消费':'马上消费','自授信,众安':'众安',\
-     '众安':'众安','自授信,阳光':'阳光','阳光':'阳光','自授信':'自授信','众安,阳光':'阳光','京东白条':'京东白条'})          
-data12['渠道1']=data12['渠道'].map({'马上消费':'马上消费','自授信,众安':'众安',\
- '众安':'众安','自授信,阳光':'阳光','阳光':'阳光','自授信':'自授信','众安,阳光':'阳光','京东白条':'京东白条'})          
-data1['渠道1']=data1['渠道'].map({'马上消费':'马上消费','自授信,众安':'众安',\
- '众安':'众安','自授信,阳光':'阳光','阳光':'阳光','自授信':'自授信','众安,阳光':'阳光','京东白条':'京东白条'})          
+ data4['渠道1']=data4['渠道'].map({'马上消费':'马上消费','自授信,众安':'众安','众安':'众安',\
+      '众安,众安,阳光,阳光':'阳光','众安,阳光,阳光':'阳光','自授信,阳光,阳光':'阳光',\
+      '自授信,阳光':'阳光','阳光':'阳光','自授信':'自授信','众安,阳光':'阳光'})
+ data5['渠道1']=data5['渠道'].map({'马上消费':'马上消费','自授信,众安':'众安',\
+      '众安':'众安','自授信,阳光':'阳光','阳光':'阳光','自授信':'自授信','众安,阳光':'阳光'})
+ data6['渠道1']=data6['渠道'].map({'马上消费':'马上消费','自授信,众安':'众安',\
+      '众安':'众安','自授信,阳光':'阳光','阳光':'阳光','自授信':'自授信','众安,阳光':'阳光'})
+ data7['渠道1']=data7['渠道'].map({'马上消费':'马上消费','自授信,众安':'众安',\
+      '众安':'众安','自授信,阳光':'阳光','阳光':'阳光','自授信':'自授信','众安,阳光':'阳光','京东白条':'京东白条'})
+ data8['渠道1']=data8['渠道'].map({'马上消费':'马上消费','自授信,众安':'众安',\
+      '众安':'众安','自授信,阳光':'阳光','阳光':'阳光','自授信':'自授信','众安,阳光':'阳光','京东白条':'京东白条'})
+ data9['渠道1']=data9['渠道'].map({'马上消费':'马上消费','自授信,众安':'众安',\
+      '众安':'众安','自授信,阳光':'阳光','阳光':'阳光','自授信':'自授信','众安,阳光':'阳光','京东白条':'京东白条'})
+ data10['渠道1']=data10['渠道'].map({'马上消费':'马上消费','自授信,众安':'众安',\
+      '众安':'众安','自授信,阳光':'阳光','阳光':'阳光','自授信':'自授信','众安,阳光':'阳光','京东白条':'京东白条'})
+ data11['渠道1']=data11['渠道'].map({'马上消费':'马上消费','自授信,众安':'众安',\
+      '众安':'众安','自授信,阳光':'阳光','阳光':'阳光','自授信':'自授信','众安,阳光':'阳光','京东白条':'京东白条'})
+ data12['渠道1']=data12['渠道'].map({'马上消费':'马上消费','自授信,众安':'众安',\
+  '众安':'众安','自授信,阳光':'阳光','阳光':'阳光','自授信':'自授信','众安,阳光':'阳光','京东白条':'京东白条'})
+ data1['渠道1']=data1['渠道'].map({'马上消费':'马上消费','自授信,众安':'众安',\
+  '众安':'众安','自授信,阳光':'阳光','阳光':'阳光','自授信':'自授信','众安,阳光':'阳光','京东白条':'京东白条'})
 
-data2['渠道1']=data2['渠道'].map({'马上消费':'马上消费','自授信,众安':'众安',\
- '众安':'众安','自授信,阳光':'阳光','阳光':'阳光','自授信':'自授信','众安,阳光':'阳光','京东白条':'京东白条'})          
+ data2['渠道1']=data2['渠道'].map({'马上消费':'马上消费','自授信,众安':'众安',\
+  '众安':'众安','自授信,阳光':'阳光','阳光':'阳光','自授信':'自授信','众安,阳光':'阳光','京东白条':'京东白条'})
 
-data3['渠道1']=data3['渠道'].map({'马上消费':'马上消费','自授信,众安':'众安',\
- '众安':'众安','自授信,阳光':'阳光','阳光':'阳光','自授信':'自授信','众安,阳光':'阳光','京东白条':'京东白条'})          
-    
-data4_2['渠道1']=data4_2['渠道'].map({'马上消费':'马上消费','自授信,众安':'众安',\
- '众安':'众安','自授信,阳光':'阳光','阳光':'阳光','自授信':'自授信','众安,阳光':'阳光','京东白条':'京东白条'})    
-  
-data5_2['渠道1']=data5_2['渠道'].map({'马上消费':'马上消费','自授信,众安':'众安',\
- '众安':'众安','自授信,阳光':'阳光','阳光':'阳光','自授信':'自授信','众安,阳光':'阳光','京东白条':'京东白条'})    
-    
-data6_2['渠道1']=data6_2['渠道'].map({'马上消费':'马上消费','自授信,众安':'众安',\
- '众安':'众安','自授信,阳光':'阳光','阳光':'阳光','自授信':'自授信','众安,阳光':'阳光','京东白条':'京东白条'})    
+ data3['渠道1']=data3['渠道'].map({'马上消费':'马上消费','自授信,众安':'众安',\
+  '众安':'众安','自授信,阳光':'阳光','阳光':'阳光','自授信':'自授信','众安,阳光':'阳光','京东白条':'京东白条'})
 
-data7_2['渠道1']=data7_2['渠道'].map({'马上消费':'马上消费','自授信,众安':'众安',\
- '众安':'众安','自授信,阳光':'阳光','阳光':'阳光','自授信':'自授信','众安,阳光':'阳光','京东白条':'京东白条'})    
+ data4_2['渠道1']=data4_2['渠道'].map({'马上消费':'马上消费','自授信,众安':'众安',\
+  '众安':'众安','自授信,阳光':'阳光','阳光':'阳光','自授信':'自授信','众安,阳光':'阳光','京东白条':'京东白条'})
+
+ data5_2['渠道1']=data5_2['渠道'].map({'马上消费':'马上消费','自授信,众安':'众安',\
+  '众安':'众安','自授信,阳光':'阳光','阳光':'阳光','自授信':'自授信','众安,阳光':'阳光','京东白条':'京东白条'})
+
+ data6_2['渠道1']=data6_2['渠道'].map({'马上消费':'马上消费','自授信,众安':'众安',\
+  '众安':'众安','自授信,阳光':'阳光','阳光':'阳光','自授信':'自授信','众安,阳光':'阳光','京东白条':'京东白条'})
+
+ data7_2['渠道1']=data7_2['渠道'].map({'马上消费':'马上消费','自授信,众安':'众安',\
+  '众安':'众安','自授信,阳光':'阳光','阳光':'阳光','自授信':'自授信','众安,阳光':'阳光','京东白条':'京东白条'})
 
 data8_2['渠道1']=data8_2['渠道'].map({'马上消费':'马上消费','自授信,众安':'众安',\
  '众安':'众安','自授信,阳光':'阳光','阳光':'阳光','自授信':'自授信','众安,阳光':'阳光','京东白条':'京东白条'})
@@ -441,94 +440,94 @@ data8_2['渠道1']=data8_2['渠道'].map({'马上消费':'马上消费','自授�
 data9_2['渠道1']=data9_2['渠道'].map({'马上消费':'马上消费','自授信,众安':'众安',\
  '众安':'众安','自授信,阳光':'阳光','阳光':'阳光','自授信':'自授信','众安,阳光':'阳光','京东白条':'京东白条'})
     
-data4['逾期天数']=data4['逾期天数'].fillna(0)    
-data5['逾期天数']=data5['逾期天数'].fillna(0)  
-data6['逾期天数']=data6['逾期天数'].fillna(0) 
-data7['逾期天数']=data7['逾期天数'].fillna(0)    
-data8['逾期天数']=data8['逾期天数'].fillna(0)    
-data9['逾期天数']=data9['逾期天数'].fillna(0)    
-data10['逾期天数']=data10['逾期天数'].fillna(0)    
-data11['逾期天数']=data11['逾期天数'].fillna(0)    
-data12['逾期天数']=data12['逾期天数'].fillna(0)      
-data1['逾期天数']=data1['逾期天数'].fillna(0)    
-data2['逾期天数']=data2['逾期天数'].fillna(0)   
-data3['逾期天数']=data3['逾期天数'].fillna(0)     
-data4_2['逾期天数']=data4_2['逾期天数'].fillna(0)    
-data5_2['逾期天数']=data5_2['逾期天数'].fillna(0)  
-data6_2['逾期天数']=data6_2['逾期天数'].fillna(0)  
-data7_2['逾期天数']=data7_2['逾期天数'].fillna(0)
+ data4['逾期天数']=data4['逾期天数'].fillna(0)
+ data5['逾期天数']=data5['逾期天数'].fillna(0)
+ data6['逾期天数']=data6['逾期天数'].fillna(0)
+ data7['逾期天数']=data7['逾期天数'].fillna(0)
+ data8['逾期天数']=data8['逾期天数'].fillna(0)
+ data9['逾期天数']=data9['逾期天数'].fillna(0)
+ data10['逾期天数']=data10['逾期天数'].fillna(0)
+ data11['逾期天数']=data11['逾期天数'].fillna(0)
+ data12['逾期天数']=data12['逾期天数'].fillna(0)
+ data1['逾期天数']=data1['逾期天数'].fillna(0)
+ data2['逾期天数']=data2['逾期天数'].fillna(0)
+ data3['逾期天数']=data3['逾期天数'].fillna(0)
+ data4_2['逾期天数']=data4_2['逾期天数'].fillna(0)
+ data5_2['逾期天数']=data5_2['逾期天数'].fillna(0)
+ data6_2['逾期天数']=data6_2['逾期天数'].fillna(0)
+ data7_2['逾期天数']=data7_2['逾期天数'].fillna(0)
 data8_2['逾期天数']=data8_2['逾期天数'].fillna(0)
 data9_2['逾期天数']=data9_2['逾期天数'].fillna(0)  
 
 
-data4['授信时间']=pd.to_datetime(data4['授信时间'].apply(lambda x:x.split(' ')[0]))
-data5['授信时间']=pd.to_datetime(data5['授信时间'].apply(lambda x:x.split(' ')[0]))
-data6['授信时间']=pd.to_datetime(data6['授信时间'].apply(lambda x:x.split(' ')[0]))
-data7['授信时间']=pd.to_datetime(data7['授信时间'].apply(lambda x:x.split(' ')[0]))
-data8['授信时间']=pd.to_datetime(data8['授信时间'].apply(lambda x:x.split(' ')[0]))
-data9['授信时间']=pd.to_datetime(data9['授信时间'].apply(lambda x:x.split(' ')[0]))
-data10['授信时间']=pd.to_datetime(data10['授信时间'].apply(lambda x:x.split(' ')[0]))
-data10=data10[~(data10['授信时间']>'2019-10-31')]
-data11['授信时间']=pd.to_datetime(data11['授信时间'].apply(lambda x:x.split(' ')[0]))
-data11=data11[~(data11['授信时间']>'2019-11-30')] 
-data12['授信时间']=pd.to_datetime(data12['授信时间'].apply(lambda x:x.split(' ')[0]))
-data12=data12[~(data12['授信时间']>'2019-12-31')] 
-data1['授信时间']=pd.to_datetime(data1['授信时间'].apply(lambda x:x.split(' ')[0]))
-data1=data1[~(data1['授信时间']>'2020-01-31')] 
-data2['授信时间']=pd.to_datetime(data2['授信时间'].apply(lambda x:x.split(' ')[0]))
-data2=data2[~(data2['授信时间']>'2020-02-29')] 
-data3['授信时间']=pd.to_datetime(data3['授信时间'].apply(lambda x:x.split(' ')[0]))
-data3=data3[~(data3['授信时间']>'2020-03-31')] 
-data4_2['授信时间']=pd.to_datetime(data4_2['授信时间'].apply(lambda x:x.split(' ')[0]))
-data4_2=data4_2[~(data4_2['授信时间']>'2020-04-30')]   
-data5_2['授信时间']=pd.to_datetime(data5_2['授信时间'].apply(lambda x:x.split(' ')[0]))
-data5_2=data5_2[~(data5_2['授信时间']>'2020-05-31')]   
-data6_2['授信时间']=pd.to_datetime(data6_2['授信时间'].apply(lambda x:x.split(' ')[0]))
-data6_2=data6_2[~(data6_2['授信时间']>'2020-06-30')]   
-data7_2['授信时间']=pd.to_datetime(data7_2['授信时间'].apply(lambda x:x.split(' ')[0]))
-data7_2=data7_2[~(data7_2['授信时间']>'2020-07-31')]   
+ data4['授信时间']=pd.to_datetime(data4['授信时间'].apply(lambda x:x.split(' ')[0]))
+ data5['授信时间']=pd.to_datetime(data5['授信时间'].apply(lambda x:x.split(' ')[0]))
+ data6['授信时间']=pd.to_datetime(data6['授信时间'].apply(lambda x:x.split(' ')[0]))
+ data7['授信时间']=pd.to_datetime(data7['授信时间'].apply(lambda x:x.split(' ')[0]))
+ data8['授信时间']=pd.to_datetime(data8['授信时间'].apply(lambda x:x.split(' ')[0]))
+ data9['授信时间']=pd.to_datetime(data9['授信时间'].apply(lambda x:x.split(' ')[0]))
+ data10['授信时间']=pd.to_datetime(data10['授信时间'].apply(lambda x:x.split(' ')[0]))
+ data10=data10[~(data10['授信时间']>'2019-10-31')]
+ data11['授信时间']=pd.to_datetime(data11['授信时间'].apply(lambda x:x.split(' ')[0]))
+ data11=data11[~(data11['授信时间']>'2019-11-30')]
+ data12['授信时间']=pd.to_datetime(data12['授信时间'].apply(lambda x:x.split(' ')[0]))
+ data12=data12[~(data12['授信时间']>'2019-12-31')]
+ data1['授信时间']=pd.to_datetime(data1['授信时间'].apply(lambda x:x.split(' ')[0]))
+ data1=data1[~(data1['授信时间']>'2020-01-31')]
+ data2['授信时间']=pd.to_datetime(data2['授信时间'].apply(lambda x:x.split(' ')[0]))
+ data2=data2[~(data2['授信时间']>'2020-02-29')]
+ data3['授信时间']=pd.to_datetime(data3['授信时间'].apply(lambda x:x.split(' ')[0]))
+ data3=data3[~(data3['授信时间']>'2020-03-31')]
+ data4_2['授信时间']=pd.to_datetime(data4_2['授信时间'].apply(lambda x:x.split(' ')[0]))
+ data4_2=data4_2[~(data4_2['授信时间']>'2020-04-30')]
+ data5_2['授信时间']=pd.to_datetime(data5_2['授信时间'].apply(lambda x:x.split(' ')[0]))
+ data5_2=data5_2[~(data5_2['授信时间']>'2020-05-31')]
+ data6_2['授信时间']=pd.to_datetime(data6_2['授信时间'].apply(lambda x:x.split(' ')[0]))
+ data6_2=data6_2[~(data6_2['授信时间']>'2020-06-30')]
+ data7_2['授信时间']=pd.to_datetime(data7_2['授信时间'].apply(lambda x:x.split(' ')[0]))
+ data7_2=data7_2[~(data7_2['授信时间']>'2020-07-31')]
 data8_2['授信时间']=pd.to_datetime(data8_2['授信时间'].apply(lambda x:x.split(' ')[0]))
 data8_2=data8_2[~(data8_2['授信时间']>'2020-08-31')]
 data9_2['授信时间']=pd.to_datetime(data9_2['授信时间'].apply(lambda x:x.split(' ')[0]))
-data9_2=data9_2[~(data9_2['授信时间']>'2020-08-31')]
+data9_2=data9_2[~(data9_2['授信时间']>'2020-09-30')]
 
 ####调整2月份数据，由于其
 #data2["逾期天数"]=np.where((data2["逾期天数"]-25)>0,data2["逾期天数"]-25,0)
 #data2["逾期天数"]=np.where(data2["逾期天数"]<20,0,data2["逾期天数"])
 
 ##----------剔除京东白条数据-----------------##
-data4=data4[data4["渠道1"]!="京东白条"]
-data4.index=range(len(data4))
-data5=data5[data5["渠道1"]!="京东白条"]
-data5.index=range(len(data5))
-data6=data6[data6["渠道1"]!="京东白条"]
-data6.index=range(len(data6))
-data7=data7[data7["渠道1"]!="京东白条"]
-data7.index=range(len(data7))
-data8=data8[data8["渠道1"]!="京东白条"]
-data8.index=range(len(data8))
-data9=data9[data9["渠道1"]!="京东白条"]
-data9.index=range(len(data9))
-data10=data10[data10["渠道1"]!="京东白条"]
-data10.index=range(len(data10))
-data11=data11[data11["渠道1"]!="京东白条"]
-data11.index=range(len(data11))
-data12=data12[data12["渠道1"]!="京东白条"]
-data12.index=range(len(data12))
-data1=data1[data1["渠道1"]!="京东白条"]
-data1.index=range(len(data1))
-data2=data2[data2["渠道1"]!="京东白条"]
-data2.index=range(len(data2))
-data3=data3[data3["渠道1"]!="京东白条"]
-data3.index=range(len(data3))
-data4_2=data4_2[data4_2["渠道1"]!="京东白条"]
-data4_2.index=range(len(data4_2))
-data5_2=data5_2[data5_2["渠道1"]!="京东白条"]
-data5_2.index=range(len(data5_2))
-data6_2=data6_2[data6_2["渠道1"]!="京东白条"]
-data6_2.index=range(len(data6_2))
-data7_2=data7_2[data7_2["渠道1"]!="京东白条"]
-data7_2.index=range(len(data7_2))
+ data4=data4[data4["渠道1"]!="京东白条"]
+ data4.index=range(len(data4))
+ data5=data5[data5["渠道1"]!="京东白条"]
+ data5.index=range(len(data5))
+ data6=data6[data6["渠道1"]!="京东白条"]
+ data6.index=range(len(data6))
+ data7=data7[data7["渠道1"]!="京东白条"]
+ data7.index=range(len(data7))
+ data8=data8[data8["渠道1"]!="京东白条"]
+ data8.index=range(len(data8))
+ data9=data9[data9["渠道1"]!="京东白条"]
+ data9.index=range(len(data9))
+ data10=data10[data10["渠道1"]!="京东白条"]
+ data10.index=range(len(data10))
+ data11=data11[data11["渠道1"]!="京东白条"]
+ data11.index=range(len(data11))
+ data12=data12[data12["渠道1"]!="京东白条"]
+ data12.index=range(len(data12))
+ data1=data1[data1["渠道1"]!="京东白条"]
+ data1.index=range(len(data1))
+ data2=data2[data2["渠道1"]!="京东白条"]
+ data2.index=range(len(data2))
+ data3=data3[data3["渠道1"]!="京东白条"]
+ data3.index=range(len(data3))
+ data4_2=data4_2[data4_2["渠道1"]!="京东白条"]
+ data4_2.index=range(len(data4_2))
+ data5_2=data5_2[data5_2["渠道1"]!="京东白条"]
+ data5_2.index=range(len(data5_2))
+ data6_2=data6_2[data6_2["渠道1"]!="京东白条"]
+ data6_2.index=range(len(data6_2))
+ data7_2=data7_2[data7_2["渠道1"]!="京东白条"]
+ data7_2.index=range(len(data7_2))
 data8_2=data8_2[data8_2["渠道1"]!="京东白条"]
 data8_2.index=range(len(data8_2))
 data9_2=data9_2[data9_2["渠道1"]!="京东白条"]
@@ -712,6 +711,8 @@ data5_2['年月']=data5_2['授信时间'].apply(lambda x:str(x.year)+'-'+str(x.m
 data6_2['年月']=data6_2['授信时间'].apply(lambda x:str(x.year)+'-'+str(x.month))
 data7_2['年月']=data7_2['授信时间'].apply(lambda x:str(x.year)+'-'+str(x.month))
 data8_2['年月']=data8_2['授信时间'].apply(lambda x:str(x.year)+'-'+str(x.month))
+data9_2['年月']=data9_2['授信时间'].apply(lambda x:str(x.year)+'-'+str(x.month))
+
 
 
 def months(str1,str2):
@@ -769,150 +770,24 @@ a14=cal(data5_2,30,'2020-5-31')
 a15=cal(data6_2,30,'2020-6-30')
 a16=cal(data7_2,30,'2020-7-31')
 a17=cal(data8_2,30,'2020-8-31')
+a18=cal(data9_2,30,'2020-9-30')
 
 
-a1.ix['2019-5']=0
-a1.ix['2019-6']=0
-a1.ix['2019-7']=0
-a1.ix['2019-8']=0
-a1.ix['2019-9']=0
-a1.ix['2019-10']=0
-a1.ix['2019-11']=0
-a1.ix['2019-12']=0
-a1.ix['2020-1']=0
-a1.ix['2020-2']=0
-a1.ix['2020-3']=0
-a1.ix['2020-4']=0
-a1.ix['2020-5']=0
-a1.ix['2020-6']=0
-a1.ix['2020-7']=0
+monthPer=[a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16,a17,a18]
+monthCha=['2019-'+str(i) for i in np.arange(5,13)]+['2020-'+str(i) for i in np.arange(1,9)]
 
-a2.ix['2019-6']=0
-a2.ix['2019-7']=0
-a2.ix['2019-8']=0
-a2.ix['2019-9']=0
-a2.ix['2019-10']=0
-a2.ix['2019-11']=0
-a2.ix['2019-12']=0
-a2.ix['2020-1']=0
-a2.ix['2020-2']=0
-a2.ix['2020-3']=0
-a2.ix['2020-4']=0
-a2.ix['2020-5']=0
-a2.ix['2020-6']=0
-a2.ix['2020-7']=0
-
-a3.ix['2019-7']=0
-a3.ix['2019-8']=0
-a3.ix['2019-9']=0
-a3.ix['2019-10']=0
-a3.ix['2019-11']=0
-a3.ix['2019-12']=0
-a3.ix['2020-1']=0
-a3.ix['2020-2']=0
-a3.ix['2020-3']=0
-a3.ix['2020-4']=0
-a3.ix['2020-5']=0
-a3.ix['2020-6']=0
-a3.ix['2020-7']=0
-
-a4.ix['2019-8']=0
-a4.ix['2019-9']=0
-a4.ix['2019-10']=0
-a4.ix['2019-11']=0
-a4.ix['2019-12']=0
-a4.ix['2020-1']=0
-a4.ix['2020-2']=0
-a4.ix['2020-3']=0
-a4.ix['2020-4']=0
-a4.ix['2020-5']=0
-a4.ix['2020-6']=0
-a4.ix['2020-7']=0
-
-a5.ix['2019-9']=0
-a5.ix['2019-10']=0
-a5.ix['2019-11']=0
-a5.ix['2019-12']=0
-a5.ix['2020-1']=0
-a5.ix['2020-2']=0
-a5.ix['2020-3']=0
-a5.ix['2020-4']=0
-a5.ix['2020-5']=0
-a5.ix['2020-6']=0
-a5.ix['2020-7']=0
-
-a6.ix['2019-10']=0
-a6.ix['2019-11']=0
-a6.ix['2019-12']=0
-a6.ix['2020-1']=0
-a6.ix['2020-2']=0
-a6.ix['2020-3']=0
-a6.ix['2020-4']=0
-a6.ix['2020-5']=0
-a6.ix['2020-6']=0
-a6.ix['2020-7']=0
-
-a7.ix['2019-11']=0
-a7.ix['2019-12']=0
-a7.ix['2020-1']=0
-a7.ix['2020-2']=0
-a7.ix['2020-3']=0
-a7.ix['2020-4']=0
-a7.ix['2020-5']=0
-a7.ix['2020-6']=0
-a7.ix['2020-7']=0
-
-a8.ix['2019-12']=0
-a8.ix['2020-1']=0
-a8.ix['2020-2']=0
-a8.ix['2020-3']=0
-a8.ix['2020-4']=0
-a8.ix['2020-5']=0
-a8.ix['2020-6']=0
-a8.ix['2020-7']=0
-
-a9.ix['2020-1']=0
-a9.ix['2020-2']=0
-a9.ix['2020-3']=0
-a9.ix['2020-4']=0
-a9.ix['2020-5']=0
-a9.ix['2020-6']=0
-a9.ix['2020-7']=0
-
-a10.ix['2020-2']=0
-a10.ix['2020-3']=0
-a10.ix['2020-4']=0
-a10.ix['2020-5']=0
-a10.ix['2020-6']=0
-a10.ix['2020-7']=0
-
-a11.ix['2020-3']=0
-a11.ix['2020-4']=0
-a11.ix['2020-5']=0
-a11.ix['2020-6']=0
-a11.ix['2020-7']=0
-
-a12.ix['2020-4']=0
-a12.ix['2020-5']=0
-a12.ix['2020-6']=0
-a12.ix['2020-7']=0
-
-
-a13.ix['2020-5']=0
-a13.ix['2020-6']=0
-a13.ix['2020-7']=0
-
-a14.ix['2020-6']=0
-a14.ix['2020-7']=0
-
-a15.ix['2020-7']=0
-
-a=a1+a2+a3+a4+a5+a6+a7+a8+a9+a10+a11+a12+a13+a14+a15+a16
+i=0
+for aper in monthPer:
+    for st in monthCha[i:]:
+        aper.ix[st]=0
+    i+=1
+    
+a=a1+a2+a3+a4+a5+a6+a7+a8+a9+a10+a11+a12+a13+a14+a15+a16+a17+a18
 
 a['time']=[parser.parse(i) for i in a.index]
 a=a.sort_values('time')
 a=a.drop('time',axis=1)
-j=0;mo=abs(months('2019-4-30',"2020-7-31"))+1##应该有数据的月份的个数
+j=0;mo=abs(months('2019-4-30',"2020-9-30"))+1##应该有数据的月份的个数
 for i in a.index:
     month=months('2019-4-30',i)
     if month>=1:
@@ -949,143 +824,19 @@ a14=cal(data5_2,60,'2020-5-31')
 a15=cal(data6_2,60,'2020-6-30')
 a16=cal(data7_2,60,'2020-7-31')
 a17=cal(data8_2,60,'2020-8-31')
+a18=cal(data9_2,60,'2020-9-30')
 
-a1.ix['2019-5']=0
-a1.ix['2019-6']=0
-a1.ix['2019-7']=0
-a1.ix['2019-8']=0
-a1.ix['2019-9']=0
-a1.ix['2019-10']=0
-a1.ix['2019-11']=0
-a1.ix['2019-12']=0
-a1.ix['2020-1']=0
-a1.ix['2020-2']=0
-a1.ix['2020-3']=0
-a1.ix['2020-4']=0
-a1.ix['2020-5']=0
-a1.ix['2020-6']=0
-a1.ix['2020-7']=0
 
-a2.ix['2019-6']=0
-a2.ix['2019-7']=0
-a2.ix['2019-8']=0
-a2.ix['2019-9']=0
-a2.ix['2019-10']=0
-a2.ix['2019-11']=0
-a2.ix['2019-12']=0
-a2.ix['2020-1']=0
-a2.ix['2020-2']=0
-a2.ix['2020-3']=0
-a2.ix['2020-4']=0
-a2.ix['2020-5']=0
-a2.ix['2020-6']=0
-a2.ix['2020-7']=0
+monthPer=[a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16,a17,a18]
+monthCha=['2019-'+str(i) for i in np.arange(5,13)]+['2020-'+str(i) for i in np.arange(1,9)]
 
-a3.ix['2019-7']=0
-a3.ix['2019-8']=0
-a3.ix['2019-9']=0
-a3.ix['2019-10']=0
-a3.ix['2019-11']=0
-a3.ix['2019-12']=0
-a3.ix['2020-1']=0
-a3.ix['2020-2']=0
-a3.ix['2020-3']=0
-a3.ix['2020-4']=0
-a3.ix['2020-5']=0
-a3.ix['2020-6']=0
-a3.ix['2020-7']=0
-
-a4.ix['2019-8']=0
-a4.ix['2019-9']=0
-a4.ix['2019-10']=0
-a4.ix['2019-11']=0
-a4.ix['2019-12']=0
-a4.ix['2020-1']=0
-a4.ix['2020-2']=0
-a4.ix['2020-3']=0
-a4.ix['2020-4']=0
-a4.ix['2020-5']=0
-a4.ix['2020-6']=0
-a4.ix['2020-7']=0
-
-a5.ix['2019-9']=0
-a5.ix['2019-10']=0
-a5.ix['2019-11']=0
-a5.ix['2019-12']=0
-a5.ix['2020-1']=0
-a5.ix['2020-2']=0
-a5.ix['2020-3']=0
-a5.ix['2020-4']=0
-a5.ix['2020-5']=0
-a5.ix['2020-6']=0
-a5.ix['2020-7']=0
-
-a6.ix['2019-10']=0
-a6.ix['2019-11']=0
-a6.ix['2019-12']=0
-a6.ix['2020-1']=0
-a6.ix['2020-2']=0
-a6.ix['2020-3']=0
-a6.ix['2020-4']=0
-a6.ix['2020-5']=0
-a6.ix['2020-6']=0
-a6.ix['2020-7']=0
-
-a7.ix['2019-11']=0
-a7.ix['2019-12']=0
-a7.ix['2020-1']=0
-a7.ix['2020-2']=0
-a7.ix['2020-3']=0
-a7.ix['2020-4']=0
-a7.ix['2020-5']=0
-a7.ix['2020-6']=0
-a7.ix['2020-7']=0
-
-a8.ix['2019-12']=0
-a8.ix['2020-1']=0
-a8.ix['2020-2']=0
-a8.ix['2020-3']=0
-a8.ix['2020-4']=0
-a8.ix['2020-5']=0
-a8.ix['2020-6']=0
-a8.ix['2020-7']=0
-
-a9.ix['2020-1']=0
-a9.ix['2020-2']=0
-a9.ix['2020-3']=0
-a9.ix['2020-4']=0
-a9.ix['2020-5']=0
-a9.ix['2020-6']=0
-a9.ix['2020-7']=0
-
-a10.ix['2020-2']=0
-a10.ix['2020-3']=0
-a10.ix['2020-4']=0
-a10.ix['2020-5']=0
-a10.ix['2020-6']=0
-a10.ix['2020-7']=0
-
-a11.ix['2020-3']=0
-a11.ix['2020-4']=0
-a11.ix['2020-5']=0
-a11.ix['2020-6']=0
-a11.ix['2020-7']=0
-
-a12.ix['2020-4']=0
-a12.ix['2020-5']=0
-a12.ix['2020-6']=0
-a12.ix['2020-7']=0
-
-a13.ix['2020-5']=0
-a13.ix['2020-6']=0
-a13.ix['2020-7']=0
-
-a14.ix['2020-6']=0
-a14.ix['2020-7']=0
-
-a15.ix['2020-7']=0
-
-a=a1+a2+a3+a4+a5+a6+a7+a8+a9+a10+a11+a12+a13+a14+a15+a16
+i=0
+for aper in monthPer:
+    for st in monthCha[i:]:
+        aper.ix[st]=0
+    i+=1
+    
+a=a1+a2+a3+a4+a5+a6+a7+a8+a9+a10+a11+a12+a13+a14+a15+a16+a17+a18
 
 a['time']=[parser.parse(i) for i in a.index]
 a=a.sort_values('time')
@@ -1130,144 +881,19 @@ a14=cal(data5_2,90,'2020-5-31')
 a15=cal(data6_2,90,'2020-6-30')
 a16=cal(data7_2,90,'2020-7-31')
 a17=cal(data8_2,90,'2020-8-31')
+a18=cal(data9_2,90,'2020-9-30')
 
-a1.ix['2019-5']=0
-a1.ix['2019-6']=0
-a1.ix['2019-7']=0
-a1.ix['2019-8']=0
-a1.ix['2019-9']=0
-a1.ix['2019-10']=0
-a1.ix['2019-11']=0
-a1.ix['2019-12']=0
-a1.ix['2020-1']=0
-a1.ix['2020-2']=0
-a1.ix['2020-3']=0
-a1.ix['2020-4']=0
-a1.ix['2020-5']=0
-a1.ix['2020-6']=0
-a1.ix['2020-7']=0
+monthPer=[a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16,a17,a18]
+monthCha=['2019-'+str(i) for i in np.arange(5,13)]+['2020-'+str(i) for i in np.arange(1,9)]
 
-a2.ix['2019-6']=0
-a2.ix['2019-7']=0
-a2.ix['2019-8']=0
-a2.ix['2019-9']=0
-a2.ix['2019-10']=0
-a2.ix['2019-11']=0
-a2.ix['2019-12']=0
-a2.ix['2020-1']=0
-a2.ix['2020-2']=0
-a2.ix['2020-3']=0
-a2.ix['2020-4']=0
-a2.ix['2020-5']=0
-a2.ix['2020-6']=0
-a2.ix['2020-7']=0
+i=0
+for aper in monthPer:
+    for st in monthCha[i:]:
+        aper.ix[st]=0
+    i+=1
+    
+a=a1+a2+a3+a4+a5+a6+a7+a8+a9+a10+a11+a12+a13+a14+a15+a16+a17+a18
 
-
-a3.ix['2019-7']=0
-a3.ix['2019-8']=0
-a3.ix['2019-9']=0
-a3.ix['2019-10']=0
-a3.ix['2019-11']=0
-a3.ix['2019-12']=0
-a3.ix['2020-1']=0
-a3.ix['2020-2']=0
-a3.ix['2020-3']=0
-a3.ix['2020-4']=0
-a3.ix['2020-5']=0
-a3.ix['2020-6']=0
-a3.ix['2020-7']=0
-
-a4.ix['2019-8']=0
-a4.ix['2019-9']=0
-a4.ix['2019-10']=0
-a4.ix['2019-11']=0
-a4.ix['2019-12']=0
-a4.ix['2020-1']=0
-a4.ix['2020-2']=0
-a4.ix['2020-3']=0
-a4.ix['2020-4']=0
-a4.ix['2020-5']=0
-a4.ix['2020-6']=0
-a4.ix['2020-7']=0
-
-a5.ix['2019-9']=0
-a5.ix['2019-10']=0
-a5.ix['2019-11']=0
-a5.ix['2019-12']=0
-a5.ix['2020-1']=0
-a5.ix['2020-2']=0
-a5.ix['2020-3']=0
-a5.ix['2020-4']=0
-a5.ix['2020-5']=0
-a5.ix['2020-6']=0
-a5.ix['2020-7']=0
-
-a6.ix['2019-10']=0
-a6.ix['2019-11']=0
-a6.ix['2019-12']=0
-a6.ix['2020-1']=0
-a6.ix['2020-2']=0
-a6.ix['2020-3']=0
-a6.ix['2020-4']=0
-a6.ix['2020-5']=0
-a6.ix['2020-6']=0
-a6.ix['2020-7']=0
-
-a7.ix['2019-11']=0
-a7.ix['2019-12']=0
-a7.ix['2020-1']=0
-a7.ix['2020-2']=0
-a7.ix['2020-3']=0
-a7.ix['2020-4']=0
-a7.ix['2020-5']=0
-a7.ix['2020-6']=0
-a7.ix['2020-7']=0
-
-a8.ix['2019-12']=0
-a8.ix['2020-1']=0
-a8.ix['2020-2']=0
-a8.ix['2020-3']=0
-a8.ix['2020-4']=0
-a8.ix['2020-5']=0
-a8.ix['2020-6']=0
-a8.ix['2020-7']=0
-
-a9.ix['2020-1']=0
-a9.ix['2020-2']=0
-a9.ix['2020-3']=0
-a9.ix['2020-4']=0
-a9.ix['2020-5']=0
-a9.ix['2020-6']=0
-a9.ix['2020-7']=0
-
-a10.ix['2020-2']=0
-a10.ix['2020-3']=0
-a10.ix['2020-4']=0
-a10.ix['2020-5']=0
-a10.ix['2020-6']=0
-a10.ix['2020-7']=0
-
-a11.ix['2020-3']=0
-a11.ix['2020-4']=0
-a11.ix['2020-5']=0
-a11.ix['2020-6']=0
-a11.ix['2020-7']=0
-
-a12.ix['2020-4']=0
-a12.ix['2020-5']=0
-a12.ix['2020-6']=0
-a12.ix['2020-7']=0
-
-a13.ix['2020-5']=0
-a13.ix['2020-6']=0
-a13.ix['2020-7']=0
-
-a14.ix['2020-6']=0
-a14.ix['2020-7']=0
-
-a15.ix['2020-7']=0
-
-a=a1+a2+a3+a4+a5+a6+a7+a8+a9+a10+a11+a12+a13+a14+a15+a16
 
 a['time']=[parser.parse(i) for i in a.index]
 a=a.sort_values('time')
@@ -1294,7 +920,7 @@ a.to_excel('Vintage90+.xlsx')
 
 
 '------------滚动率------------------'
-data56=pd.merge(data7_2,data8_2,on='库天下用户Id',how='inner') 
+data56=pd.merge(data8_2,data9_2,on='库天下用户Id',how='inner') 
 data56['逾期天数_x']=data56['逾期天数_x'].fillna(0)
 data56['逾期天数_y']=data56['逾期天数_y'].fillna(0)
 data56['滚动']=data56['逾期天数_x'].apply(lambda x:str(int(x)))+"--"+data56['逾期天数_y'].apply(lambda x:str(int(x)))
